@@ -23,11 +23,6 @@ using std::endl;
 class Node {
 public:
     Node();
-    void addHead();
-    void addTail();
-    void deleteFirstNode();
-    void deleteLastNode();
-    void traverseList();
 private:
     int val;
     Node *next;

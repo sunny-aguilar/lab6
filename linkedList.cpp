@@ -47,23 +47,23 @@ void LinkedList::menuOption() {
     switch (menu.validateNumber(1,6)) {
         case 1:
             // Add an ew node to the head
-            node.addHead();
+            addHead();
             break;
         case 2:
             // Add a new node to the tail
-            node.addTail();
+            addTail();
             break;
         case 3:
             // Delete from head
-            node.deleteFirstNode();
+            deleteFirstNode();
             break;
         case 4:
             // Delete from tail
-            node.deleteLastNode();
+            deleteLastNode();
             break;
         case 5:
             // Traverse the list reversely
-            node.traverseList();
+            traverseList();
             break;
         case 6:
             // Exit
@@ -72,4 +72,45 @@ void LinkedList::menuOption() {
         default:
             cout << "Unable to make a selection!\n";
     }
+}
+
+/*********************************************************************
+** Description:     adds a new node head to the head
+*********************************************************************/
+void LinkedList::addHead() {
+    cout << "adding node to head\n\n";
+    if (head == nullptr) {
+
+    }
+    else {
+
+    }
+}
+
+/*********************************************************************
+** Description:     adds a new node head to the tail
+*********************************************************************/
+void LinkedList::addTail() {
+    cout << "adding node to tail\n\n";
+}
+
+/*********************************************************************
+** Description:     deletes the first node in the list
+*********************************************************************/
+void LinkedList::deleteFirstNode() {
+    cout << "deleting first node\n\n";
+}
+
+/*********************************************************************
+** Description:     deletes the last node in the list
+*********************************************************************/
+void LinkedList::deleteLastNode() {
+    cout << "deleting last node\n\n";
+}
+
+/*********************************************************************
+** Description:     traverse the list reversely
+*********************************************************************/
+void LinkedList::traverseList() {
+    cout << "traversing the list in reverse\n\n";
 }

@@ -23,6 +23,12 @@ public:
     void startSim();
     void programLogic();
     void menuOption();
+    void addHead();
+    void addTail();
+    void deleteFirstNode();
+    void deleteLastNode();
+    void traverseList();
+
 private:
     Node node;
     Menu menu;
