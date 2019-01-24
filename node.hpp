@@ -23,7 +23,7 @@ using std::endl;
 class Node {
 public:
     Node();
-    Node(int val, Node *next);
+    Node(int val, Node *next = nullptr);
     void setNext(Node &addNode);
     Node *getNext();
     Node *next;
