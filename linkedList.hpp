@@ -22,6 +22,7 @@ public:
     void startSim();
     void programLogic();
 private:
+    Node node;
 };
 
 #endif //LAB6_LINKEDLIST_HPP
