@@ -22,7 +22,7 @@ Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 ** Description:     adds a new node head to the head
 *********************************************************************/
 void Node::addHead() {
-
+    cout << ""
 }
 
 /*********************************************************************
@@ -50,5 +50,5 @@ void Node::deleteLastNode() {
 ** Description:     traverse the list reversely
 *********************************************************************/
 void Node::traverseList() {
-    
+
 }

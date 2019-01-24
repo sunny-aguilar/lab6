@@ -14,6 +14,12 @@
 #ifndef NODE_HPP
 #define NODE_HPP
 
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::string;
+using std::endl;
+
 class Node {
 public:
     Node();
