@@ -14,4 +14,9 @@
 #ifndef LINKEDLIST_HPP
 #define LINKEDLIST_HPP
 
+class LinkedList {
+public:
+private:
+};
+
 #endif //LAB6_LINKEDLIST_HPP

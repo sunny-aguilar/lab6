@@ -14,4 +14,9 @@
 #ifndef MENU_HPP
 #define MENU_HPP
 
+class Menu {
+public:
+private:
+};
+
 #endif //LAB6_MENU_HPP

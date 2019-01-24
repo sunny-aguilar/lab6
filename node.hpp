@@ -14,4 +14,9 @@
 #ifndef NODE_HPP
 #define NODE_HPP
 
+class Node {
+public:
+private:
+};
+
 #endif //LAB6_NODE_HPP
