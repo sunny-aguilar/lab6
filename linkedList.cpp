@@ -46,21 +46,27 @@ void LinkedList::menuOption() {
     switch (menu.validateNumber(1,6)) {
         case 1:
             // Add an ew node to the head
+
             break;
         case 2:
             // Add a new node to the tail
+
             break;
         case 3:
             // Delete from head
+
             break;
         case 4:
             // Delete from tail
+
             break;
         case 5:
             // Traverse the list reversely
+
             break;
         case 6:
             // Exit
+
             break;
         default:
             cout << "Unable to make a selection!\n";
