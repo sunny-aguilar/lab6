@@ -81,9 +81,15 @@ void LinkedList::addHead(int val) {
     cout << "adding node to head\n\n";
     if (head == nullptr) {
         head = new Node(val);
+        tail = head; // tail must point to head if only one node
     }
     else {
-
+        Node *nodePtr = head;
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
+        }
+        nodePtr->getNext() = new Node(val);
+        nodePtr->setNext(nodePtr);
     }
 }
 

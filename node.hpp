@@ -24,6 +24,9 @@ class Node {
 public:
     Node();
     Node(int val);
+    void setNext(Node &addNode);
+    Node *getNext();
+
 private:
     int val;
     Node *next;
