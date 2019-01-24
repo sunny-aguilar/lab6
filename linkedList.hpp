@@ -27,6 +27,8 @@ private:
     Node node;
     Menu menu;
     bool showMenu;
+    Node *head;
+    Node *tail;
 };
 
 #endif //LAB6_LINKEDLIST_HPP

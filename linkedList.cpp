@@ -16,7 +16,7 @@
 /*********************************************************************
 ** Description:     no-args default constructor
 *********************************************************************/
-LinkedList::LinkedList() : showMenu{true} {}
+LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 
 /*********************************************************************
 ** Description:     start the linked list program

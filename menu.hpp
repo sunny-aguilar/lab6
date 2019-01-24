@@ -25,6 +25,12 @@ using std::endl;
 class Menu {
 public:
     void menuStart();
+    void addNodeHead();
+    void addNodeTail();
+    void deleteNodeHead();
+    void deleteNodeTail();
+    void traverNode();
+    void menuExit();
     int validateNumber(int min, int max);
 private:
 };

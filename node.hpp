@@ -16,7 +16,11 @@
 
 class Node {
 public:
+    Node();
 private:
+    int val;
+    Node *next;
+    Node *prev;
 };
 
 #endif //LAB6_NODE_HPP
