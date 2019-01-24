@@ -44,7 +44,7 @@ void LinkedList::programLogic() {
 **                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-    switch (menu.validateNumber(1,6)) {
+    switch ( menu.validateNumber(1,6) ) {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
@@ -77,7 +77,7 @@ void LinkedList::menuOption() {
 }
 
 /*********************************************************************
-** Description:     adds a new node head to the head
+** Description:     adds a new node to the head of the list
 *********************************************************************/
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
@@ -100,7 +100,7 @@ void LinkedList::addHead(int val) {
 }
 
 /*********************************************************************
-** Description:     adds a new node head to the tail
+** Description:     adds a new node to the tail of the list
 *********************************************************************/
 void LinkedList::addTail(int val) {
     cout << "adding node to tail\n\n";
