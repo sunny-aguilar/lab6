@@ -23,6 +23,12 @@ Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 *********************************************************************/
 void Node::addHead() {
     cout << "adding node to head\n\n";
+    if (head == nullptr) {
+
+    }
+    else {
+
+    }
 }
 
 /*********************************************************************
