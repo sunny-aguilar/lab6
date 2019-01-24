@@ -80,22 +80,12 @@ void LinkedList::menuOption() {
 ** Description:     adds a new node to the head of the list
 *********************************************************************/
 void LinkedList::addHead(int val) {
-    if (head == nullptr) {
-        head = new Node(val);
+    Node *nodePtr, *previousNodePtr;
+
+    if (head == nullptr || head->val >= val) {
+        head = new Node(val, head);
         tail = head; // tail must point to head if only one node
-        Node *nodePtr = head;
         cout << "value added to head" << head->val << endl << endl;
-    }
-    else {
-        Node *nodePtr = head;
-        while (nodePtr->getNext() != nullptr) {
-            nodePtr = nodePtr->getNext();
-            nodePtr->prev = nodePtr;
-        }
-        nodePtr->next = new Node(val);
-//        nodePtr->getNext() = new Node(val);
-//        nodePtr->setNext(nodePtr);
-        cout << "Value " << nodePtr->val;
     }
 }
 
@@ -103,22 +93,21 @@ void LinkedList::addHead(int val) {
 ** Description:     adds a new node to the tail of the list
 *********************************************************************/
 void LinkedList::addTail(int val) {
-    cout << "adding node to tail\n\n";
     if (head == nullptr) {
         head = new Node(val);
         tail = head; // tail must point to head if only one node
-        Node *nodePtr = head;
         cout << "value added to tail" << head->val << endl << endl;
     }
     else {
+        // create pointer and assign to head of list
         Node *nodePtr = head;
+
+        // loop through nodes until it reaches until next = nullptr
         while (nodePtr->getNext() != nullptr) {
-            nodePtr = nodePtr->getNext();
-            nodePtr->prev = nodePtr;
+            nodePtr = nodePtr->next;
         }
+        // create a node and assign to next
         nodePtr->next = new Node(val);
-//        nodePtr->getNext() = new Node(val);
-//        nodePtr->setNext(nodePtr);
         cout << "Value " << nodePtr->val;
     }
 }
@@ -147,4 +136,5 @@ void LinkedList::traverseList() {
         cout << nodePtr->val << " ";
         nodePtr = nodePtr->next;
     }
+    cout << endl << endl;
 }

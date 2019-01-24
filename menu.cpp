@@ -40,7 +40,7 @@ void Menu::menuExit() {
 }
 
 /*********************************************************************
-** Description:     tells user the program has ended
+** Description:     prompts user for new head value
 *********************************************************************/
 void Menu::menuAddNodeHead() {
     cout << "\n Enter an integer to add to the head of the list\n"
@@ -48,7 +48,14 @@ void Menu::menuAddNodeHead() {
     cout << ">> ";
 }
 
-
+/*********************************************************************
+** Description:     prompts user for new tail value
+*********************************************************************/
+void Menu::menuAddNodeTail() {
+    cout << "\n Enter an integer to add to the tail of the list\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
 
 
 /*********************************************************************
