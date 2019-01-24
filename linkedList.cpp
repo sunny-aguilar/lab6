@@ -80,13 +80,13 @@ void LinkedList::menuOption() {
 ** Description:     adds a new node to the head of the list
 *********************************************************************/
 void LinkedList::addHead(int val) {
-//    if (head == nullptr || head->val >= val) {
-//        head = new Node(val, head);
-//        tail = head; // tail must point to head if only one node
-//        cout << "value added to head" << head->val << endl << endl;
-//    }
+    if (head == nullptr) {
+        head = new Node(val, head);
+        tail = head; // tail must point to head if only one node
+        cout << "value added to head" << head->val << endl << endl;
+    }
     Node *newHead = new Node(val);
-    head = new Node();
+
 }
 
 /*********************************************************************
