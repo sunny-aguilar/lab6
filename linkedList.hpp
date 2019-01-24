@@ -19,10 +19,14 @@
 
 class LinkedList {
 public:
+    LinkedList();
     void startSim();
     void programLogic();
+    void menuOption();
 private:
     Node node;
+    Menu menu;
+    bool showMenu;
 };
 
 #endif //LAB6_LINKEDLIST_HPP

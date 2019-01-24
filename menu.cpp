@@ -13,8 +13,21 @@
 
 #include "menu.hpp"
 
-
-
+/*********************************************************************
+** Description:     main menu
+*********************************************************************/
+void Menu::menuStart() {
+    cout << " WELCOME TO MY LINKED LIST!\n"
+            "+--------------------------------------------------+\n";
+    cout << "   Choose from the following Options:\n";
+    cout << "   1. Add a new node to the head\n";
+    cout << "   2. Add a new node to the tail\n";
+    cout << "   3. Delete from head\n";
+    cout << "   4. Delete from tail\n";
+    cout << "   5. Traverse the list reversely\n";
+    cout << "   6. Exit\n";
+    cout << "   >> ";
+}
 
 
 
