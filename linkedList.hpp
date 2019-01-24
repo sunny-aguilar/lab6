@@ -14,8 +14,13 @@
 #ifndef LINKEDLIST_HPP
 #define LINKEDLIST_HPP
 
+#include "menu.hpp"
+#include "node.hpp"
+
 class LinkedList {
 public:
+    void startSim();
+    void programLogic();
 private:
 };
 

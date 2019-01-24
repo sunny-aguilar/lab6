@@ -10,10 +10,11 @@
 **                  d
 **                  d
 *********************************************************************/
+#include "linkedList.hpp"
 #include <iostream>
 
 int main() {
-
-
+    LinkedList link;
+    link.startSim();
     return 0;
 }
