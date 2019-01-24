@@ -33,16 +33,16 @@ void LinkedList::programLogic() {
     do {
         menu.menuStart();
 
-
+        menuOption();
     } while (showMenu);
 
 }
 
 /*********************************************************************
-** Description:     function
+** Description:     this function gets the user's main menu selection
+**                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-
     switch (menu.validateNumber(1,6)) {
         case 1:
 
