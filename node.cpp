@@ -21,12 +21,16 @@ Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 /*********************************************************************
 ** Description:     adds a new node head to the head
 *********************************************************************/
-void add
+void Node::addHead() {
+
+}
 
 /*********************************************************************
 ** Description:     adds a new node head to the tail
 *********************************************************************/
+void Node::addTail() {
 
+}
 
 /*********************************************************************
 ** Description:     deletes the first node in the list
