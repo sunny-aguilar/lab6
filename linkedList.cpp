@@ -47,7 +47,7 @@ void LinkedList::menuOption() {
     switch (menu.validateNumber(1,6)) {
         case 1:
             // Add an ew node to the head
-            addHead();
+            addHead(menu.validateNumber(1,999));
             break;
         case 2:
             // Add a new node to the tail
@@ -77,10 +77,10 @@ void LinkedList::menuOption() {
 /*********************************************************************
 ** Description:     adds a new node head to the head
 *********************************************************************/
-void LinkedList::addHead() {
+void LinkedList::addHead(int val) {
     cout << "adding node to head\n\n";
     if (head == nullptr) {
-
+        head = new Node(val);
     }
     else {
 

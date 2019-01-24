@@ -23,6 +23,7 @@ using std::endl;
 class Node {
 public:
     Node();
+    Node(int val);
 private:
     int val;
     Node *next;
