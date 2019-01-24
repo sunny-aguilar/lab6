@@ -26,11 +26,12 @@ public:
     Node(int val);
     void setNext(Node &addNode);
     Node *getNext();
-
-private:
-    int val;
     Node *next;
     Node *prev;
+    int val;
+private:
+//    Node *next;
+
 };
 
 #endif //LAB6_NODE_HPP

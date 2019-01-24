@@ -17,7 +17,7 @@
 ** Description:     main menu
 *********************************************************************/
 void Menu::menuStart() {
-    cout << " WELCOME TO MY LINKED LIST!\n"
+    cout << "\n WELCOME TO MY LINKED LIST!\n"
             "+--------------------------------------------------+\n";
     cout << "   Choose from the following Options:\n";
     cout << "   1. Add a new node to the head\n";
@@ -39,8 +39,14 @@ void Menu::menuExit() {
             "+--------------------------------------------------+\n";
 }
 
-
-
+/*********************************************************************
+** Description:     tells user the program has ended
+*********************************************************************/
+void Menu::menuAddNodeHead() {
+    cout << "\n Enter an integer to add to the head of the list\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
 
 
 

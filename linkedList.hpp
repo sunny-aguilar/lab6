@@ -24,7 +24,7 @@ public:
     void programLogic();
     void menuOption();
     void addHead(int val);
-    void addTail();
+    void addTail(int val);
     void deleteFirstNode();
     void deleteLastNode();
     void traverseList();

@@ -47,11 +47,13 @@ void LinkedList::menuOption() {
     switch (menu.validateNumber(1,6)) {
         case 1:
             // Add an ew node to the head
-            addHead(menu.validateNumber(1,999));
+            menu.menuAddNodeHead();
+            addHead( menu.validateNumber(1,999) );
             break;
         case 2:
             // Add a new node to the tail
-            addTail();
+            menu.menuAddNodeTail();
+            addTail( menu.validateNumber(1,999) );
             break;
         case 3:
             // Delete from head
@@ -78,26 +80,47 @@ void LinkedList::menuOption() {
 ** Description:     adds a new node head to the head
 *********************************************************************/
 void LinkedList::addHead(int val) {
-    cout << "adding node to head\n\n";
     if (head == nullptr) {
         head = new Node(val);
         tail = head; // tail must point to head if only one node
+        Node *nodePtr = head;
+        cout << "value added to head" << head->val << endl << endl;
     }
     else {
         Node *nodePtr = head;
         while (nodePtr->getNext() != nullptr) {
             nodePtr = nodePtr->getNext();
+            nodePtr->prev = nodePtr;
         }
-        nodePtr->getNext() = new Node(val);
-        nodePtr->setNext(nodePtr);
+        nodePtr->next = new Node(val);
+//        nodePtr->getNext() = new Node(val);
+//        nodePtr->setNext(nodePtr);
+        cout << "Value " << nodePtr->val;
     }
 }
 
 /*********************************************************************
 ** Description:     adds a new node head to the tail
 *********************************************************************/
-void LinkedList::addTail() {
+void LinkedList::addTail(int val) {
     cout << "adding node to tail\n\n";
+    if (head == nullptr) {
+        head = new Node(val);
+        tail = head; // tail must point to head if only one node
+        Node *nodePtr = head;
+        cout << "value added to tail" << head->val << endl << endl;
+    }
+    else {
+        Node *nodePtr = head;
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
+            nodePtr->prev = nodePtr;
+        }
+        nodePtr->next = new Node(val);
+//        nodePtr->getNext() = new Node(val);
+//        nodePtr->setNext(nodePtr);
+        cout << "Value " << nodePtr->val;
+    }
 }
 
 /*********************************************************************
@@ -119,4 +142,9 @@ void LinkedList::deleteLastNode() {
 *********************************************************************/
 void LinkedList::traverseList() {
     cout << "traversing the list in reverse\n\n";
+    Node *nodePtr = tail;
+    while (nodePtr) {
+        cout << nodePtr->val << " ";
+        nodePtr = nodePtr->next;
+    }
 }
