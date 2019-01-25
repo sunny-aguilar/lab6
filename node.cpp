@@ -47,3 +47,6 @@ void Node::setVal(int val) {
 /*********************************************************************
 ** Description:     returns integer value in node
 *********************************************************************/
+int Node::getVal() {
+    return val;
+}
