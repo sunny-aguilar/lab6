@@ -54,7 +54,6 @@ void LinkedList::menuOption() {
             break;
         case 3:
             // Delete from head
-            menu.menuDeleteNodeHead();
             deleteFirstNode();
             break;
         case 4:
@@ -130,6 +129,7 @@ void LinkedList::deleteFirstNode() {
         return;
     }
     else {
+        menu.menuDeleteNodeHead();
         nodePtr = head;
         head = head->next;
         delete nodePtr;
