@@ -110,7 +110,7 @@ void LinkedList::addTail(int val) {
         }
         // create a node and assign to next
         nodePtr->next = new Node(val);
-        cout << "Value " << nodePtr->val;
+        cout << "value added to tail " << nodePtr->val;
     }
 }
 
@@ -119,6 +119,8 @@ void LinkedList::addTail(int val) {
 *********************************************************************/
 void LinkedList::deleteFirstNode() {
     cout << "deleting first node\n\n";
+
+    
 }
 
 /*********************************************************************
