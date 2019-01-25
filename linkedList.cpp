@@ -150,10 +150,10 @@ void LinkedList::deleteLastNode() {
     else {
         menu.menuDeleteNodeTail();
         Node *nodePtr = head;
-        while (nodePtr->next) {
+        while (nodePtr->next != nullptr) {
             head = head->next;
         }
-        
+        delete nodePtr;
     }
 }
 
