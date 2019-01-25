@@ -1,14 +1,15 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     LAB6 -
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Node class is the data structure that consists of
+**                  of the node. The node only holds one integer
+**                  data value and two pointers that can hold nodes.
+**                  There is a constructor that builds a node with
+**                  a value and with a default argument that can
+**                  be used to set the node pointer to null or pass
+**                  in a pointer to have the newly created node point
+**                  to it. There are setters and getters for the
+**                  private data variables as well.
 *********************************************************************/
 
 #include "node.hpp"
