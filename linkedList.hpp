@@ -10,7 +10,10 @@
 **                  that add nodes to the head or tail, delete the
 **                  first or last nodes, traverses the list backwards,
 **                  and an internal function that displays the list
-**                  after each operation.
+**                  after each operation. There is also a function
+**                  that displays the value in each node in reverse
+**                  and it uses recursion to accomplish that.
+**                  d
 **                  d
 *********************************************************************/
 
