@@ -89,7 +89,6 @@ void LinkedList::addHead(int val) {
     }
     else {
         Node *newHead = new Node(val);
-        head->next = head;
         newHead->next = head;
     }
 
