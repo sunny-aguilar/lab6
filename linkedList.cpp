@@ -143,9 +143,9 @@ void LinkedList::deleteFirstNode() {
 ** Description:     deletes the last node in the list
 *********************************************************************/
 void LinkedList::deleteLastNode() {
-    cout << "deleting last node\n\n";
     if (!head) {
         menu.menuListEmpty();
+        return;
     }
     else {
         menu.menuDeleteNodeTail();

@@ -70,7 +70,7 @@ void Menu::menuDeleteNodeHead() {
 ** Description:     delete the last node on the list
 *********************************************************************/
 void Menu::menuDeleteNodeTail() {
-    cout << "\n The last node on the list has been deleted\n"
+    cout << "\n The node at the back of the list has been deleted\n"
             "+--------------------------------------------------+\n";
 }
 
