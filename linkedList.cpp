@@ -122,7 +122,6 @@ void LinkedList::addTail(int val) {
 ** Description:     deletes the first node in the list
 *********************************************************************/
 void LinkedList::deleteFirstNode() {
-    cout << "deleting first node\n\n";
     Node *nodePtr;
     if (!head) {
         menu.menuListEmpty();
@@ -151,7 +150,7 @@ void LinkedList::deleteLastNode() {
         menu.menuListEmpty();
         return;
     }
-    else if (nodePtr->getNext() == nullptr ) {
+    else if (nodePtr->getNext() == nullptr) {
         nodePtr = head;
         head = nullptr;
         delete nodePtr;
