@@ -84,10 +84,8 @@ void LinkedList::menuOption() {
 *********************************************************************/
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
-        Node *ptr = new Node(val);
-        ptr->next = head;
-        tail = head; // tail must point to head if only one node
-        cout << "value added to head" << ptr->val << endl << endl;
+        head = new Node(val);
+        cout << "value added to head" << head->val << endl << endl;
     }
     else {
         Node *newHead = new Node(val);
