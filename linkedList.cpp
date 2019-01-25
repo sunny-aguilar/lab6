@@ -59,7 +59,7 @@ void LinkedList::menuOption() {
             break;
         case 4:
             // Delete from tail
-            men
+            menu.menuDeleteNodeTail();
             deleteLastNode();
             break;
         case 5:
