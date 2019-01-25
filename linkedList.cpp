@@ -124,11 +124,14 @@ void LinkedList::addTail(int val) {
 *********************************************************************/
 void LinkedList::deleteFirstNode() {
     cout << "deleting first node\n\n";
-    if (head == nullptr) {
+    Node *nodePtr;
+    if (!head) {
         return;
     }
-    else if () {
-
+    else {
+        nodePtr = head;
+        head = head->next;
+        delete nodePtr;
     }
 
 }
