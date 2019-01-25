@@ -1,8 +1,8 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     LAB6 -
-**                  d
+** Description:     Menu class holds the the main menu and user
+**                  prompts for the program.
 **                  d
 **                  d
 **                  d
