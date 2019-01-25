@@ -58,6 +58,22 @@ void Menu::menuAddNodeTail() {
 }
 
 /*********************************************************************
+** Description:     delete the first node on the list
+*********************************************************************/
+void Menu::menuDeleteNodeHead() {
+    cout << "\n The first node on the list has been deleted\n"
+            "+--------------------------------------------------+\n";
+}
+
+/*********************************************************************
+** Description:     delete the last node on the list
+*********************************************************************/
+void Menu::menuDeleteNodeTail() {
+    cout << "\n The first node on the list has been deleted\n"
+            "+--------------------------------------------------+\n";
+}
+
+/*********************************************************************
 ** Description:     traversing the list backwards message
 *********************************************************************/
 void Menu::menuTraverseNodeBackwards() {

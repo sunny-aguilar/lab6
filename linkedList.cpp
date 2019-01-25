@@ -54,10 +54,12 @@ void LinkedList::menuOption() {
             break;
         case 3:
             // Delete from head
+            menu.menuDeleteNodeHead()
             deleteFirstNode();
             break;
         case 4:
             // Delete from tail
+            men
             deleteLastNode();
             break;
         case 5:
