@@ -64,6 +64,7 @@ void LinkedList::menuOption() {
             // Traverse the list reversely
             menu.menuTraverseNodeBackwards();
             traverseBackwards(head);
+            cout << endl << endl;
             break;
         case 6:
             // Exit
@@ -172,13 +173,14 @@ void LinkedList::deleteLastNode() {
 }
 
 /*********************************************************************
-** Description:     traverse the list reversely
+** Description:     traverse the list reversely using a recursive
+**                  function. Recursion will occur until the base case
+**                  is reached; that is when nodePtr->next reaches
+**                  nullptr. Base case will print the value starting
+**                  with the last value in the linked list.
 *********************************************************************/
 void LinkedList::traverseBackwards(Node *pHead) {
     Node *nodePtr = pHead;
-//    while (nodePtr->next != nullptr) {
-//        traverseBackwards();
-//    }
 
     if (nodePtr->next != nullptr) {
         traverseBackwards(nodePtr->next);
