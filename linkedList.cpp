@@ -161,6 +161,7 @@ void LinkedList::deleteLastNode() {
             prev = nodePtr;
             nodePtr = nodePtr->next;
         }
+        prev->next = nullptr;
         delete nodePtr;
     }
 
