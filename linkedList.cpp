@@ -143,19 +143,24 @@ void LinkedList::deleteFirstNode() {
 ** Description:     deletes the last node in the list
 *********************************************************************/
 void LinkedList::deleteLastNode() {
+    Node *nodePtr, *prev;
+
     if (!head) {
         menu.menuListEmpty();
         return;
     }
+    else if (nodePtr->next == nullptr ) {
+        nodePtr = head;
+        head = nullptr;
+        delete nodePtr;
+    }
     else {
         menu.menuDeleteNodeTail();
-        Node *nodePtr = head;
-        Node *previousNodePtr;
+        nodePtr = head;
         while (nodePtr->next != nullptr) {
-            previousNodePtr = nodePtr;
+            prev = nodePtr;
             nodePtr = nodePtr->next;
         }
-        previousNodePtr = nullptr;
         delete nodePtr;
     }
 
