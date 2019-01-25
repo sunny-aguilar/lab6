@@ -149,6 +149,7 @@ void LinkedList::deleteLastNode() {
     }
     else {
         menu.menuDeleteNodeTail();
+        
     }
 }
 
