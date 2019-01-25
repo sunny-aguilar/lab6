@@ -176,6 +176,7 @@ void LinkedList::deleteLastNode() {
 *********************************************************************/
 void LinkedList::traverseBackwards() {
     cout << "traversing the list in reverse\n\n";
+    
 }
 
 /*********************************************************************
