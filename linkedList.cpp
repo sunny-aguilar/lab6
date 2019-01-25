@@ -183,7 +183,7 @@ void LinkedList::traverseBackwards(Node *pHead) {
     Node *nodePtr = pHead;
 
     if (!nodePtr) {
-        cout << "THe list is empty!\n\n";
+        cout << "The list is empty!\n\n";
         return;
     }
 
