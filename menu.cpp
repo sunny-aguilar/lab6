@@ -1,14 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     LAB6 -
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Menu class holds the main menu and user prompts
+**                  for the program. The menu class lives inside of
+**                  the LinkedList class and the menus are called
+**                  as needed from within the LinkedList class.
 *********************************************************************/
 
 #include "menu.hpp"
@@ -28,8 +24,6 @@ void Menu::menuStart() {
     cout << "   6. Exit\n";
     cout << "   >> ";
 }
-
-
 
 /*********************************************************************
 ** Description:     tells user the program has ended
