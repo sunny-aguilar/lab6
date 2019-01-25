@@ -1,7 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     LAB6 -
+** Description:     LinkedList class is where the functions are held
+**                  that interact with the nodes in the linked-list.
+**                  LinkedList owns a menu object to handles the menu
+**                  operations.
 **                  d
 **                  d
 **                  d
@@ -28,7 +31,6 @@ public:
     void traverseForward();
 
 private:
-//    Node node;
     Menu menu;
     bool showMenu;
     Node *head;

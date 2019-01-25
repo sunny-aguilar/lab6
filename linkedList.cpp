@@ -45,12 +45,12 @@ void LinkedList::menuOption() {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
-            addHead( menu.validateNumber(1,999) );
+            addHead( menu.validateNumber(0,999) );
             break;
         case 2:
             // Add a new node to the tail
             menu.menuAddNodeTail();
-            addTail( menu.validateNumber(1 ,999) );
+            addTail( menu.validateNumber(0 ,999) );
             break;
         case 3:
             // Delete from head

@@ -43,7 +43,8 @@ void Menu::menuExit() {
 ** Description:     prompts user for new head value
 *********************************************************************/
 void Menu::menuAddNodeHead() {
-    cout << "\n Enter an integer to add to the head of the list\n"
+    cout << "\n Enter an integer from 0 to 999 to \n"
+            " add to the head of the list\n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }
@@ -52,7 +53,8 @@ void Menu::menuAddNodeHead() {
 ** Description:     prompts user for new tail value
 *********************************************************************/
 void Menu::menuAddNodeTail() {
-    cout << "\n Enter an integer to add to the tail of the list\n"
+    cout << "\n Enter an integer from 0 to 999 to \n"
+            " add to the head of the list\n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }
