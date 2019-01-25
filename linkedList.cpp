@@ -63,7 +63,7 @@ void LinkedList::menuOption() {
         case 5:
             // Traverse the list reversely
             menu.menuTraverseNodeBackwards();
-            traverseBackwards();
+            traverseBackwards(head);
             break;
         case 6:
             // Exit
@@ -174,9 +174,16 @@ void LinkedList::deleteLastNode() {
 /*********************************************************************
 ** Description:     traverse the list reversely
 *********************************************************************/
-void LinkedList::traverseBackwards() {
-    cout << "traversing the list in reverse\n\n";
-    
+void LinkedList::traverseBackwards(Node *pHead) {
+    Node *nodePtr = pHead;
+//    while (nodePtr->next != nullptr) {
+//        traverseBackwards();
+//    }
+
+    if (nodePtr->next != nullptr) {
+        traverseBackwards(nodePtr->next);
+    }
+    cout << nodePtr->val << " ";
 }
 
 /*********************************************************************

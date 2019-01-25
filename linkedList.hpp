@@ -24,7 +24,7 @@ public:
     void addTail(int val);
     void deleteFirstNode();
     void deleteLastNode();
-    void traverseBackwards();
+    void traverseBackwards(Node *phead);
     void traverseForward();
 
 private:
