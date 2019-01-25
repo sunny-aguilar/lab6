@@ -6,9 +6,6 @@
 **                  d
 **                  d
 **                  d
-**                  d
-**                  d
-**                  d
 *********************************************************************/
 
 #include "linkedList.hpp"
@@ -44,7 +41,7 @@ void LinkedList::programLogic() {
 **                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-    switch ( menu.validateNumber(1,6) ) {
+    switch ( menu.validateNumber(1,7) ) {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
@@ -65,9 +62,15 @@ void LinkedList::menuOption() {
             break;
         case 5:
             // Traverse the list reversely
-            traverseList();
+            menu.menuTraverseNodeBackwards();
+            traverseBackwards();
             break;
         case 6:
+            // Traverse the list forward
+            menu.menuTraverseNodeForward();
+            traverseForward();
+            break;
+        case 7:
             // Exit
             showMenu = false;
             break;
@@ -81,11 +84,16 @@ void LinkedList::menuOption() {
 *********************************************************************/
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
-        head = new Node(val, head);
+        Node *ptr = new Node(val);
+        ptr->next = head;
         tail = head; // tail must point to head if only one node
-        cout << "value added to head" << head->val << endl << endl;
+        cout << "value added to head" << ptr->val << endl << endl;
     }
-    Node *newHead = new Node(val);
+    else {
+        Node *newHead = new Node(val);
+        head->next = head;
+        newHead->next = head;
+    }
 
 }
 
@@ -95,8 +103,8 @@ void LinkedList::addHead(int val) {
 void LinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
-        tail = head; // tail must point to head if only one node
-        cout << "value added to tail" << head->val << endl << endl;
+        head->next = nullptr;
+        cout << "value added to tail " << head->val << endl << endl;
     }
     else {
         // create pointer and assign to head of list
@@ -129,10 +137,17 @@ void LinkedList::deleteLastNode() {
 /*********************************************************************
 ** Description:     traverse the list reversely
 *********************************************************************/
-void LinkedList::traverseList() {
+void LinkedList::traverseBackwards() {
     cout << "traversing the list in reverse\n\n";
-    Node *nodePtr = tail;
-    while (nodePtr) {
+}
+
+/*********************************************************************
+** Description:     traverse the list forward
+*********************************************************************/
+void LinkedList::traverseForward() {
+    cout << "traversing the list forward\n\n";
+    Node *nodePtr = head;
+    while (nodePtr != nullptr) {
         cout << nodePtr->val << " ";
         nodePtr = nodePtr->next;
     }

@@ -29,7 +29,8 @@ public:
     void menuAddNodeTail();
     void menuDeleteNodeHead();
     void menuDeleteNodeTail();
-    void menuTraverNode();
+    void menuTraverseNodeBackwards();
+    void menuTraverseNodeForward();
     void menuExit();
     int validateNumber(int min, int max);
 private:

@@ -6,9 +6,6 @@
 **                  d
 **                  d
 **                  d
-**                  d
-**                  d
-**                  d
 *********************************************************************/
 
 #ifndef LINKEDLIST_HPP
@@ -27,7 +24,8 @@ public:
     void addTail(int val);
     void deleteFirstNode();
     void deleteLastNode();
-    void traverseList();
+    void traverseBackwards();
+    void traverseForward();
 
 private:
 //    Node node;

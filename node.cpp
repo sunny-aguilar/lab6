@@ -21,16 +21,12 @@ Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 /*********************************************************************
 ** Description:     one-args default constructor sets initial value
 *********************************************************************/
-Node::Node(int val, Node *next = nullptr) :
-    val{val},
-    next{next},
-    prev{prev} {
-}
+Node::Node(int val, Node *node) : val{val}, next{node} {}
 
 /*********************************************************************
 ** Description:     sets next pointer
 *********************************************************************/
-void Node::setNext(Node &addNode) {
+void Node::setNext() {
 //    next = addNode;
 }
 

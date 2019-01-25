@@ -25,7 +25,8 @@ void Menu::menuStart() {
     cout << "   3. Delete from head\n";
     cout << "   4. Delete from tail\n";
     cout << "   5. Traverse the list reversely\n";
-    cout << "   6. Exit\n";
+    cout << "   6. Traverse the list forward\n";
+    cout << "   7. Exit\n";
     cout << "   >> ";
 }
 
@@ -57,6 +58,23 @@ void Menu::menuAddNodeTail() {
     cout << ">> ";
 }
 
+/*********************************************************************
+** Description:     traversing the list backwards message
+*********************************************************************/
+void Menu::menuTraverseNodeBackwards() {
+    cout << "\n Traversing the linked list in reverse\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
+** Description:     traversing the list forwards message
+*********************************************************************/
+void Menu::menuTraverseNodeForward() {
+    cout << "\n Traversing the linked list forwards\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
 
 /*********************************************************************
 ** Description:     general validator where the parameters are the
