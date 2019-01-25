@@ -50,7 +50,7 @@ void LinkedList::menuOption() {
         case 2:
             // Add a new node to the tail
             menu.menuAddNodeTail();
-            addTail( menu.validateNumber(1,999) );
+            addTail( menu.validateNumber(1 ,999) );
             break;
         case 3:
             // Delete from head
@@ -125,9 +125,9 @@ void LinkedList::deleteFirstNode() {
     if (head == nullptr) {
         return;
     }
-    else if () {
-
-    }
+//    else if () {
+//
+//    }
 
 }
 
@@ -149,7 +149,6 @@ void LinkedList::traverseBackwards() {
 ** Description:     traverse the list forward
 *********************************************************************/
 void LinkedList::traverseForward() {
-    cout << "traversing the list forward\n\n";
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
         cout << nodePtr->val << " ";

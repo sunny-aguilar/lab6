@@ -25,8 +25,7 @@ void Menu::menuStart() {
     cout << "   3. Delete from head\n";
     cout << "   4. Delete from tail\n";
     cout << "   5. Traverse the list reversely\n";
-    cout << "   6. Traverse the list forward\n";
-    cout << "   7. Exit\n";
+    cout << "   6. Exit\n";
     cout << "   >> ";
 }
 
@@ -71,7 +70,7 @@ void Menu::menuTraverseNodeBackwards() {
 ** Description:     traversing the list forwards message
 *********************************************************************/
 void Menu::menuTraverseNodeForward() {
-    cout << "\n Traversing the linked list forwards\n"
+    cout << "\n Traversing the linked list forward\n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }
