@@ -58,7 +58,6 @@ void LinkedList::menuOption() {
             break;
         case 4:
             // Delete from tail
-            menu.menuDeleteNodeTail();
             deleteLastNode();
             break;
         case 5:
@@ -145,6 +144,12 @@ void LinkedList::deleteFirstNode() {
 *********************************************************************/
 void LinkedList::deleteLastNode() {
     cout << "deleting last node\n\n";
+    if (!head) {
+        menu.menuListEmpty();
+    }
+    else {
+        menu.menuDeleteNodeTail();
+    }
 }
 
 /*********************************************************************
