@@ -127,9 +127,9 @@ void LinkedList::deleteFirstNode() {
     if (head == nullptr) {
         return;
     }
-//    else if () {
-//
-//    }
+    else if () {
+
+    }
 
 }
 
