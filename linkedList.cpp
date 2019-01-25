@@ -126,6 +126,7 @@ void LinkedList::deleteFirstNode() {
     cout << "deleting first node\n\n";
     Node *nodePtr;
     if (!head) {
+        menu.menuListEmpty();
         return;
     }
     else {
@@ -133,6 +134,9 @@ void LinkedList::deleteFirstNode() {
         head = head->next;
         delete nodePtr;
     }
+
+    // traverse the list
+    menu.menuTraverseNodeForward();
     traverseForward();
 }
 

@@ -74,6 +74,14 @@ void Menu::menuDeleteNodeTail() {
 }
 
 /*********************************************************************
+** Description:     prompts user that there are no nodes to delete
+*********************************************************************/
+void Menu::menuListEmpty() {
+    cout << "\n There are no nodes in the list to be deleted\n"
+            "+--------------------------------------------------+\n";
+}
+
+/*********************************************************************
 ** Description:     traversing the list backwards message
 *********************************************************************/
 void Menu::menuTraverseNodeBackwards() {

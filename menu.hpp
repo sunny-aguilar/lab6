@@ -29,6 +29,7 @@ public:
     void menuAddNodeTail();
     void menuDeleteNodeHead();
     void menuDeleteNodeTail();
+    void menuListEmpty();
     void menuTraverseNodeBackwards();
     void menuTraverseNodeForward();
     void menuExit();
