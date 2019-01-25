@@ -61,7 +61,7 @@ void Menu::menuAddNodeTail() {
 ** Description:     delete the first node on the list
 *********************************************************************/
 void Menu::menuDeleteNodeHead() {
-    cout << "\n Delete Nodes\n"
+    cout << "\n DELETE NODES\n"
             "+--------------------------------------------------+\n";
     cout << ">> The first node on the list has been deleted";
 }
@@ -78,7 +78,7 @@ void Menu::menuDeleteNodeTail() {
 ** Description:     prompts user that there are no nodes to delete
 *********************************************************************/
 void Menu::menuListEmpty() {
-    cout << "\n Delete Nodes\n"
+    cout << "\n DELETE NODES\n"
             "+--------------------------------------------------+\n";
     cout << ">> There are no nodes in the list to be deleted\n";
 }
