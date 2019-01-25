@@ -144,6 +144,7 @@ void LinkedList::deleteFirstNode() {
 *********************************************************************/
 void LinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
+    nodePtr = prev = head;
 
     if (!head) {
         menu.menuListEmpty();
