@@ -41,7 +41,7 @@ void LinkedList::programLogic() {
 **                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-    switch ( menu.validateNumber(1,7) ) {
+    switch ( menu.validateNumber(1,6) ) {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
@@ -66,11 +66,6 @@ void LinkedList::menuOption() {
             traverseBackwards();
             break;
         case 6:
-            // Traverse the list forward
-            menu.menuTraverseNodeForward();
-            traverseForward();
-            break;
-        case 7:
             // Exit
             showMenu = false;
             break;
@@ -89,6 +84,10 @@ void LinkedList::addHead(int val) {
     else {
         head = new Node(val, head);
     }
+
+    // traverse the list
+    menu.menuTraverseNodeForward();
+    traverseForward();
 }
 
 /*********************************************************************
@@ -112,6 +111,10 @@ void LinkedList::addTail(int val) {
         nodePtr->next = new Node(val);
         cout << "value added to tail " << nodePtr->val;
     }
+
+    // traverse the list
+    menu.menuTraverseNodeForward();
+    traverseForward();
 }
 
 /*********************************************************************
@@ -119,8 +122,13 @@ void LinkedList::addTail(int val) {
 *********************************************************************/
 void LinkedList::deleteFirstNode() {
     cout << "deleting first node\n\n";
+    if (head == nullptr) {
+        return;
+    }
+    else if () {
 
-    
+    }
+
 }
 
 /*********************************************************************
