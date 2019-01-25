@@ -149,6 +149,10 @@ void LinkedList::deleteLastNode() {
     }
     else {
         menu.menuDeleteNodeTail();
+        Node *nodePtr = head;
+        while (nodePtr->next) {
+            head = head->next;
+        }
         
     }
 }
