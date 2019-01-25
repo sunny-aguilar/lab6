@@ -70,7 +70,7 @@ void Menu::menuTraverseNodeBackwards() {
 ** Description:     traversing the list forwards message
 *********************************************************************/
 void Menu::menuTraverseNodeForward() {
-    cout << "\n Traversing the linked list forward\n"
+    cout << "\n\n Traversing the linked list forward\n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }
