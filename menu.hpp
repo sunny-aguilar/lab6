@@ -1,14 +1,10 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     Menu class holds the the main menu and user
-**                  prompts for the program.
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     Menu class holds the main menu and user prompts
+**                  for the program. The menu class lives inside of
+**                  the LinkedList class and the menus are called
+**                  as needed from within the LinkedList class.
 *********************************************************************/
 
 #ifndef MENU_HPP
