@@ -30,8 +30,8 @@ public:
     int getVal();
     Node *next;
     Node *prev;
-    int val;
 private:
+    int val;
 //    Node *next;
 
 };

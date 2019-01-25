@@ -98,7 +98,7 @@ void LinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
         head->next = nullptr;
-        cout << "value added to tail " << head->val << endl << endl;
+        cout << "value added to tail " << head->getVal() << endl << endl;
     }
     else {
         // create pointer and assign to head of list
@@ -110,7 +110,7 @@ void LinkedList::addTail(int val) {
         }
         // create a node and assign to next
         nodePtr->next = new Node(val);
-        cout << "value added to tail " << nodePtr->val;
+        cout << "value added to tail " << nodePtr->getVal() ;
     }
 
     // traverse the list
@@ -182,10 +182,15 @@ void LinkedList::deleteLastNode() {
 void LinkedList::traverseBackwards(Node *pHead) {
     Node *nodePtr = pHead;
 
+    if (!nodePtr) {
+        cout << "THe list is empty!\n\n";
+        return;
+    }
+
     if (nodePtr->next != nullptr) {
         traverseBackwards(nodePtr->next);
     }
-    cout << nodePtr->val << " ";
+    cout << nodePtr->getVal()  << " ";
 }
 
 /*********************************************************************
@@ -194,7 +199,7 @@ void LinkedList::traverseBackwards(Node *pHead) {
 void LinkedList::traverseForward() {
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
-        cout << nodePtr->val << " ";
+        cout << nodePtr->getVal()  << " ";
         nodePtr = nodePtr->next;
     }
     cout << endl << endl;
