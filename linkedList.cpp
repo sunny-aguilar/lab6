@@ -155,6 +155,10 @@ void LinkedList::deleteLastNode() {
         }
         delete nodePtr;
     }
+
+    // traverse the list
+    menu.menuTraverseNodeForward();
+    traverseForward();
 }
 
 /*********************************************************************
