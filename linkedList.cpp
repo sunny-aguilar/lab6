@@ -133,7 +133,7 @@ void LinkedList::deleteFirstNode() {
         head = head->next;
         delete nodePtr;
     }
-
+    traverseForward();
 }
 
 /*********************************************************************
