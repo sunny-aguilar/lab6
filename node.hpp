@@ -24,15 +24,15 @@ class Node {
 public:
     Node();
     Node(int val, Node *node = nullptr);
-    void setNext();
+    void setNext(Node *nxt);
     Node *getNext();
     void setVal(int val);
     int getVal();
-    Node *next;
+//    Node *next;
     Node *prev;
 private:
     int val;
-//    Node *next;
+    Node *next;
 
 };
 

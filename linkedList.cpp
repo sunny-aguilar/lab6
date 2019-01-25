@@ -97,7 +97,7 @@ void LinkedList::addHead(int val) {
 void LinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
-        head->next = nullptr;
+        head->setNext(nullptr);
         cout << "value added to tail " << head->getVal() << endl << endl;
     }
     else {
@@ -105,11 +105,11 @@ void LinkedList::addTail(int val) {
         Node *nodePtr = head;
 
         // loop through nodes until it reaches until next = nullptr
-        while (nodePtr->next != nullptr) {
-            nodePtr = nodePtr->next;
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
         }
         // create a node and assign to next
-        nodePtr->next = new Node(val);
+        nodePtr->setNext(new Node(val));
         cout << "value added to tail " << nodePtr->getVal() ;
     }
 
@@ -131,7 +131,7 @@ void LinkedList::deleteFirstNode() {
     else {
         menu.menuDeleteNodeHead();
         nodePtr = head;
-        head = head->next;
+        head = head->getNext();
         delete nodePtr;
     }
 
@@ -151,7 +151,7 @@ void LinkedList::deleteLastNode() {
         menu.menuListEmpty();
         return;
     }
-    else if (nodePtr->next == nullptr ) {
+    else if (nodePtr->getNext() == nullptr ) {
         nodePtr = head;
         head = nullptr;
         delete nodePtr;
@@ -159,11 +159,11 @@ void LinkedList::deleteLastNode() {
     else {
         menu.menuDeleteNodeTail();
         nodePtr = head;
-        while (nodePtr->next != nullptr) {
+        while (nodePtr->getNext() != nullptr) {
             prev = nodePtr;
-            nodePtr = nodePtr->next;
+            nodePtr = nodePtr->getNext();
         }
-        prev->next = nullptr;
+        prev->setNext(nullptr);
         delete nodePtr;
     }
 
@@ -187,8 +187,8 @@ void LinkedList::traverseBackwards(Node *pHead) {
         return;
     }
 
-    if (nodePtr->next != nullptr) {
-        traverseBackwards(nodePtr->next);
+    if (nodePtr->getNext() != nullptr) {
+        traverseBackwards(nodePtr->getNext());
     }
     cout << nodePtr->getVal()  << " ";
 }
@@ -200,7 +200,7 @@ void LinkedList::traverseForward() {
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
         cout << nodePtr->getVal()  << " ";
-        nodePtr = nodePtr->next;
+        nodePtr = nodePtr->getNext();
     }
     cout << endl << endl;
 }

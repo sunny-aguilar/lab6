@@ -26,8 +26,8 @@ Node::Node(int val, Node *node) : val{val}, next{node} {}
 /*********************************************************************
 ** Description:     sets next pointer
 *********************************************************************/
-void Node::setNext() {
-//    next = addNode;
+void Node::setNext(Node *next) {
+    this->next = next;
 }
 
 /*********************************************************************
