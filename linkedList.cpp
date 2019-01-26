@@ -94,9 +94,19 @@ void LinkedList::menuOption() {
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
         head = new Node(val);
+
+        // set tail equal to head node
+        tail = head;
     }
     else {
         head = new Node(val, head);
+
+        // set tail to last node on list
+        Node *nodePtr = head;
+        while (nodePtr->getNext() != nodePtr) {
+            nodePtr = nodePtr->getNext();
+        }
+        tail = nodePtr;
     }
 
     // traverse the list
@@ -112,6 +122,9 @@ void LinkedList::addTail(int val) {
         head = new Node(val);
         head->setNext(nullptr);
         cout << "value added to tail " << head->getVal() << endl << endl;
+
+        // set tail equal to head node
+        tail = head;
     }
     else {
         // create pointer and assign to head of list
@@ -123,7 +136,7 @@ void LinkedList::addTail(int val) {
         }
         // create a node and assign to next
         nodePtr->setNext(new Node(val));
-        cout << "value added to tail " << nodePtr->getVal() ;
+        cout << "value added to tail " << nodePtr->getVal();
     }
 
     // traverse the list
@@ -245,4 +258,7 @@ void LinkedList::printTail() {
         }
         cout << "Tail value is " << nodePtr->getVal() << endl;
     }
+
+    // print tail value
+    cout << "Tail value is " << tail->getVal() << endl;
 }
