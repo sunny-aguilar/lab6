@@ -21,7 +21,9 @@ void Menu::menuStart() {
     cout << "   3. Delete from head\n";
     cout << "   4. Delete from tail\n";
     cout << "   5. Traverse the list reversely\n";
-    cout << "   6. Exit\n";
+    cout << "   6. Print head value\n";
+    cout << "   7. Print tail value\n";
+    cout << "   8. Exit\n";
     cout << "   >> ";
 }
 
@@ -93,6 +95,24 @@ void Menu::menuTraverseNodeBackwards() {
 *********************************************************************/
 void Menu::menuTraverseNodeForward() {
     cout << "\n\n Traversing the linked list forward\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
+** Description:     prints the value held by the head of the list
+*********************************************************************/
+void Menu::printHeadValue() {
+    cout << "\n PRINT HEAD NODE VALUE \n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
+** Description:     prints the value held by the tail of the list
+*********************************************************************/
+void Menu::printTailValue() {
+    cout << "\n PRINT TAIL NODE VALUE \n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }

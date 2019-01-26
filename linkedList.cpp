@@ -41,7 +41,7 @@ void LinkedList::programLogic() {
 **                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-    switch ( menu.validateNumber(1,6) ) {
+    switch ( menu.validateNumber(1,8) ) {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
@@ -67,6 +67,14 @@ void LinkedList::menuOption() {
             cout << endl << endl;
             break;
         case 6:
+            // Display head node value
+            menu.printHeadValue();
+            break;
+        case 7:
+            // Display tail node value
+            menu.printTailValue();
+            break;
+        case 8:
             // Exit
             showMenu = false;
             break;

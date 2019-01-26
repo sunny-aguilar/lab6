@@ -28,6 +28,8 @@ public:
     void menuListEmpty();
     void menuTraverseNodeBackwards();
     void menuTraverseNodeForward();
+    void printHeadValue();
+    void printTailValue();
     void menuExit();
     int validateNumber(int min, int max);
 private:
