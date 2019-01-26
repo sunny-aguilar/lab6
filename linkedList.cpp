@@ -305,6 +305,7 @@ void LinkedList::createListFromFile() {
     ifstream inFile;                            // create input file object
     ofstream outFile;                           // holds output file names
     string outFileName;                         // holds output file names
+    string input;
 
     // loop - ask user for file name if incorrect
     do {
@@ -314,4 +315,11 @@ void LinkedList::createListFromFile() {
             cout << "File not found! "          // request file name if not found
                  << "Enter a file name:\n";
     } while (inFile.fail());                    // if file not found, repeat loop
+
+    // confirm input file opened
+    cout << "Input file successfully opened\n";
+
+    // get a paragraph
+    getline(inFile, input);
+
 }
