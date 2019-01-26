@@ -97,14 +97,10 @@ void LinkedList::addHead(int val) {
 
         // set tail equal to head node
         tail = head;
-        cout << "Head address " << head << endl;
-        cout << "Tail address " << tail << endl;
     }
     else {
-        cout << "Head before address " << head << endl;
-        cout << "Head value " << head->getVal() << endl;
+        // add new node to head of the list
         head = new Node(val, head);
-        cout << "Head after address " << head << endl;
 
         // set tail to last node on list
         Node *nodePtr = head->getNext();
@@ -128,10 +124,11 @@ void LinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
         head->setNext(nullptr);
-        cout << "value added to tail " << head->getVal() << endl << endl;
+        cout << "value added to null tail " << head->getVal() << endl << endl;
 
         // set tail equal to head node
         tail = head;
+        cout << "Tail value " << tail->getVal() << endl;
     }
     else {
         // create pointer and assign to head of list
@@ -143,7 +140,17 @@ void LinkedList::addTail(int val) {
         }
         // create a node and assign to next
         nodePtr->setNext(new Node(val));
-        cout << "value added to tail " << nodePtr->getVal();
+
+        // set tail to last node on list
+
+        nodePtr = head->getNext();
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
+        }
+        tail = nodePtr;
+
+        // DEBUGGING - used to make sure tail is equal to last value
+        // cout << "Tail value " << tail->getVal() << endl << endl;
     }
 
     // traverse the list
