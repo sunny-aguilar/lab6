@@ -22,6 +22,9 @@
 
 #include "menu.hpp"
 #include "node.hpp"
+#include <fstream>
+using std::ifstream;
+using std::ofstream;
 
 class LinkedList {
 public:
