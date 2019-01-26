@@ -232,12 +232,14 @@ void LinkedList::printHead() {
 *********************************************************************/
 void LinkedList::printTail() {
     Node *nodePtr = head;
+
     if (!nodePtr) {
         cout << "there is no node in the tail\n";
     }
-
-    while (nodePtr->getNext() != nullptr) {
-        nodePtr->getNext();
+    else {
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
+        }
+        cout << "Tail value is " << nodePtr->getVal() << endl;
     }
-    cout << "Tail value is " << nodePtr->getVal();
 }
