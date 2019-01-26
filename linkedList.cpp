@@ -300,6 +300,12 @@ void LinkedList::printTail() {
 **                  File name is node_list.txt
 *********************************************************************/
 void LinkedList::createListFromFile() {
+    if (head != nullptr) {
+        cout << "A node list already exists!\n";
+        return;
+    }
+
+
     // create variables
     string fileName;                            // holds input file name
     ifstream inFile;                            // create input file object
@@ -329,5 +335,4 @@ void LinkedList::createListFromFile() {
 
         addTail(val);
     }
-
 }
