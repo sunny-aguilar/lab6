@@ -21,7 +21,14 @@ LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 /*********************************************************************
 ** Description:     destructor that destroys the list
 *********************************************************************/
-
+LinkedList::~LinkedList() {
+    Node *nodePtr = head;
+    while (nodePtr != nullptr) {
+        Node *garbage = nodePtr;
+        nodePtr = nodePtr->getNext();
+        delete garbage;
+    }
+}
 
 /*********************************************************************
 ** Description:     start the linked list program
