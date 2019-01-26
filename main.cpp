@@ -12,6 +12,8 @@
 **                  exist. Recursion is used to print the list in
 **                  reverse. After a user is done interacting with the
 **                  linked-list, they can quit the program.
+**                  EXTRA CREDIT - print head value
+**                  EXTRA CREDIT - print tail value
 *********************************************************************/
 #include "linkedList.hpp"
 #include <iostream>

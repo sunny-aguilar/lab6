@@ -13,8 +13,8 @@
 **                  after each operation. There is also a function
 **                  that displays the value in each node in reverse
 **                  and it uses recursion to accomplish that.
-**                  d
-**                  d
+**                  EXTRA CREDIT - print head value
+**                  EXTRA CREDIT - print tail value
 *********************************************************************/
 
 #ifndef LINKEDLIST_HPP

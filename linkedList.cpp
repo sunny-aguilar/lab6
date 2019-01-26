@@ -1,12 +1,18 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     The linkedList class (doubly-linked list)  holds
-**                  the functions that are performed on the nodes.
-**                  Nodes can be added to the head, deleted from the
-**                  tail, and you can traverse backwards through the
-**                  the nodes. Node values are printed after each
-**                  operation if there are nodes in the list.
+** Description:     LinkedList class is where the functions are held
+**                  that interact with the nodes in the linked-list.
+**                  LinkedList owns a menu object to handles the menu
+**                  operations. A node pointer is also declared
+**                  within the class to hold the head and tail of the
+**                  nodes. There are a total of 6 required functions
+**                  that add nodes to the head or tail, delete the
+**                  first or last nodes, traverses the list backwards,
+**                  and an internal function that displays the list
+**                  after each operation. There is also a function
+**                  that displays the value in each node in reverse
+**                  and it uses recursion to accomplish that.
 **                  EXTRA CREDIT - print head value
 **                  EXTRA CREDIT - print tail value
 *********************************************************************/
@@ -273,18 +279,10 @@ void LinkedList::printHead() {
 *********************************************************************/
 void LinkedList::printTail() {
     Node *nodePtr = head;
-
     if (!nodePtr) {
         cout << "there is no node in the tail\n";
     }
     else {
-        while (nodePtr->getNext() != nullptr) {
-            nodePtr = nodePtr->getNext();
-        }
-        cout << "Tail value is " << nodePtr->getVal() << endl;
-        cout << "Tail value is " << nodePtr << endl;
+        cout << "Tail value is " << tail->getVal() << endl;
     }
-
-    // print tail value
-    cout << "Tail value is " << tail->getVal() << endl;
 }
