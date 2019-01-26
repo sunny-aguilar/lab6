@@ -102,17 +102,18 @@ void LinkedList::addHead(int val) {
     }
     else {
         cout << "Head before address " << head << endl;
+        cout << "Head value " << head->getVal() << endl;
         head = new Node(val, head);
         cout << "Head after address " << head << endl;
 
         // set tail to last node on list
-        Node *nodePtr = head;
-//        while (nodePtr->getNext() != nodePtr) {
-//            nodePtr = nodePtr->getNext();
-//        }
-        tail = head;
-        cout << "Head address " << head << endl;
-        cout << "Tail address " << tail->getNext() << endl;
+        Node *nodePtr = head->getNext();
+        while (nodePtr->getNext() != nullptr) {
+            nodePtr = nodePtr->getNext();
+        }
+        tail = nodePtr;
+        // DEBUGGING - used to make sure tail is equal to last value
+        // cout << "Tail value " << tail->getVal() << endl;
     }
 
     // traverse the list
