@@ -37,6 +37,7 @@ public:
     void traverseBackwards(Node *phead);
     void printHead();
     void printTail();
+    void createListFromFile();
 
 private:
     Menu menu;
