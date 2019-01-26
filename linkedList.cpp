@@ -336,6 +336,7 @@ void LinkedList::createListFromFile() {
         // convert string to int
         int val = std::atoi(input.c_str());
 
+        // add each value to the end of the list
         addTail(val);
     }
 }
