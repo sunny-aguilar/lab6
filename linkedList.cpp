@@ -220,7 +220,7 @@ void LinkedList::traverseForward() {
 void LinkedList::printHead() {
     Node *nodePtr = head;
     if (!nodePtr) {
-        cout << "there is not node in the head\n";
+        cout << "there is no node in the head\n";
     }
     if (nodePtr) {
         cout << "Head value is " << nodePtr->getVal() << endl;
@@ -231,5 +231,13 @@ void LinkedList::printHead() {
 ** Description:     prints the value of the tail node
 *********************************************************************/
 void LinkedList::printTail() {
+    Node *nodePtr = head;
+    if (!nodePtr) {
+        cout << "there is no node in the tail\n";
+    }
 
+    while (nodePtr->getNext() != nullptr) {
+        nodePtr->getNext();
+    }
+    cout << "Tail value is " << nodePtr->getVal();
 }
