@@ -65,7 +65,7 @@ void LinkedList::programLogic() {
 **                  and completes the operation selected
 *********************************************************************/
 void LinkedList::menuOption() {
-    switch ( menu.validateNumber(1,8) ) {
+    switch ( menu.validateNumber(1,9) ) {
         case 1:
             // Add an ew node to the head
             menu.menuAddNodeHead();
@@ -101,6 +101,11 @@ void LinkedList::menuOption() {
             printTail();
             break;
         case 8:
+            // Create a linked list from a text file
+            menu.textFileList();
+            createListFromFile();
+            break;
+        case 9:
             // Exit
             showMenu = false;
             break;
@@ -288,4 +293,11 @@ void LinkedList::printTail() {
     else {
         cout << "Tail value is " << tail->getVal() << endl;
     }
+}
+
+/*********************************************************************
+** Description:     EXTRA CREDIT - creates a list from a text file
+*********************************************************************/
+void LinkedList::createListFromFile() {
+
 }

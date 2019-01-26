@@ -118,6 +118,17 @@ void Menu::printTailValue() {
 }
 
 /*********************************************************************
+** Description:     prompts user that a list is being created from a
+**                  text file
+*********************************************************************/
+void Menu::textFileList() {
+    cout << "\n ENTER FILE NAME \n"
+            " i.e., \"node_list.txt\"\n"
+            "+--------------------------------------------------+\n";
+    cout << ">> ";
+}
+
+/*********************************************************************
 ** Description:     general validator where the parameters are the
 **                  min and max numbers acceptable
 *********************************************************************/
