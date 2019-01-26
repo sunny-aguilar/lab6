@@ -312,11 +312,8 @@ void LinkedList::createListFromFile() {
     }
 
     // create a node list from a text file
-    // create variables
     string fileName;                            // holds input file name
     ifstream inFile;                            // create input file object
-    ofstream outFile;                           // holds output file names
-    string outFileName;                         // holds output file names
     string input;
 
     // loop - ask user for file name if incorrect
