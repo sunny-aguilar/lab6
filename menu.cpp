@@ -23,7 +23,8 @@ void Menu::menuStart() {
     cout << "   5. Traverse the list reversely\n";
     cout << "   6. Print head value\n";
     cout << "   7. Print tail value\n";
-    cout << "   8. Exit\n";
+    cout << "   8. Create node list from file\n";
+    cout << "   9. Exit\n";
     cout << "   >> ";
 }
 
@@ -122,8 +123,7 @@ void Menu::printTailValue() {
 **                  text file
 *********************************************************************/
 void Menu::textFileList() {
-    cout << "\n ENTER FILE NAME \n"
-            " i.e., \"node_list.txt\"\n"
+    cout << "\n ENTER FILE NAME - i.e., \"node_list.txt\"\n"
             "+--------------------------------------------------+\n";
     cout << ">> ";
 }
