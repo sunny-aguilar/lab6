@@ -15,6 +15,7 @@
 **                  and it uses recursion to accomplish that.
 **                  EXTRA CREDIT - print head value
 **                  EXTRA CREDIT - print tail value
+**                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 
 #include "linkedList.hpp"
@@ -297,15 +298,20 @@ void LinkedList::printTail() {
 
 /*********************************************************************
 ** Description:     EXTRA CREDIT - creates a list from a text file.
-**                  File name is node_list.txt
+**                  File name is node_list.txt. If a node list already
+**                  exist, I programmed it so that you cannot create
+**                  another one (cannot add to it). Otherwise, if no
+**                  node list exist yet, then a user is allowed to
+**                  create one from a text file.
 *********************************************************************/
 void LinkedList::createListFromFile() {
+    // do not create a node list if one already exist
     if (head != nullptr) {
         cout << "A node list already exists!\n";
         return;
     }
 
-
+    // create a node list from a text file
     // create variables
     string fileName;                            // holds input file name
     ifstream inFile;                            // create input file object

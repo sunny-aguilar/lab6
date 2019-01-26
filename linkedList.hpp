@@ -15,6 +15,7 @@
 **                  and it uses recursion to accomplish that.
 **                  EXTRA CREDIT - print head value
 **                  EXTRA CREDIT - print tail value
+**                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 
 #ifndef LINKEDLIST_HPP
