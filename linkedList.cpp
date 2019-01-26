@@ -69,12 +69,10 @@ void LinkedList::menuOption() {
         case 6:
             // Display head node value
             menu.printHeadValue();
-
             break;
         case 7:
             // Display tail node value
             menu.printTailValue();
-
             break;
         case 8:
             // Exit
