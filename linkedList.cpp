@@ -64,7 +64,7 @@ void LinkedList::menuOption() {
             // Traverse the list reversely
             menu.menuTraverseNodeBackwards();
             traverseBackwards(head);
-            cout << endl << endl;
+            cout << endl;
             break;
         case 6:
             // Display head node value
@@ -192,7 +192,7 @@ void LinkedList::traverseBackwards(Node *pHead) {
     Node *nodePtr = pHead;
 
     if (!nodePtr) {
-        cout << "The list is empty!\n\n";
+        cout << "The list is empty!\n";
         return;
     }
 
@@ -215,7 +215,7 @@ void LinkedList::traverseForward() {
 }
 
 /*********************************************************************
-** Description:     prints the value of the head node
+** Description:     EXTRA CREDIT - prints the value of the head node
 *********************************************************************/
 void LinkedList::printHead() {
     Node *nodePtr = head;
@@ -228,7 +228,7 @@ void LinkedList::printHead() {
 }
 
 /*********************************************************************
-** Description:     prints the value of the tail node
+** Description:     EXTRA CREDIT - prints the value of the tail node
 *********************************************************************/
 void LinkedList::printTail() {
     Node *nodePtr = head;
