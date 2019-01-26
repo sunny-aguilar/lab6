@@ -142,7 +142,6 @@ void LinkedList::addTail(int val) {
         nodePtr->setNext(new Node(val));
 
         // set tail to last node on list
-
         nodePtr = head->getNext();
         while (nodePtr->getNext() != nullptr) {
             nodePtr = nodePtr->getNext();
@@ -180,7 +179,8 @@ void LinkedList::deleteFirstNode() {
 }
 
 /*********************************************************************
-** Description:     deletes the last node in the list
+** Description:     deletes the last node in the list and updates
+**                  tail pointer to last node on list, if it exist
 *********************************************************************/
 void LinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
@@ -193,6 +193,7 @@ void LinkedList::deleteLastNode() {
     else if (nodePtr->getNext() == nullptr) {
         nodePtr = head;
         head = nullptr;
+        tail = nullptr;
         delete nodePtr;
     }
     else {
@@ -202,6 +203,7 @@ void LinkedList::deleteLastNode() {
             prev = nodePtr;
             nodePtr = nodePtr->getNext();
         }
+        tail = prev;
         prev->setNext(nullptr);
         delete nodePtr;
     }
