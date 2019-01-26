@@ -34,6 +34,8 @@ public:
     void deleteFirstNode();
     void deleteLastNode();
     void traverseBackwards(Node *phead);
+    void printHead();
+    void printTail();
 
 private:
     Menu menu;

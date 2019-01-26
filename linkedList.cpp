@@ -69,10 +69,12 @@ void LinkedList::menuOption() {
         case 6:
             // Display head node value
             menu.printHeadValue();
+            printHead();
             break;
         case 7:
             // Display tail node value
             menu.printTailValue();
+            printTail();
             break;
         case 8:
             // Exit
@@ -210,4 +212,24 @@ void LinkedList::traverseForward() {
         nodePtr = nodePtr->getNext();
     }
     cout << endl << endl;
+}
+
+/*********************************************************************
+** Description:     prints the value of the head node
+*********************************************************************/
+void LinkedList::printHead() {
+    Node *nodePtr = head;
+    if (!nodePtr) {
+        cout << "there is not node in the head\n";
+    }
+    if (nodePtr) {
+        cout << "Head value is " << nodePtr->getVal() << endl;
+    }
+}
+
+/*********************************************************************
+** Description:     prints the value of the tail node
+*********************************************************************/
+void LinkedList::printTail() {
+
 }
