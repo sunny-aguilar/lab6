@@ -319,7 +319,12 @@ void LinkedList::createListFromFile() {
     // confirm input file opened
     cout << "Input file successfully opened\n";
 
-    // get a paragraph
-    getline(inFile, input);
+    // get each value until end of file is reached
+    while (!inFile.eof()) {
+        // get a paragraph
+        getline(inFile, input);
+
+        
+    }
 
 }
