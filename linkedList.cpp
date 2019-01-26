@@ -324,7 +324,10 @@ void LinkedList::createListFromFile() {
         // get a paragraph
         getline(inFile, input);
 
-        
+        // convert string to int
+        int val = std::atoi(input.c_str());
+
+        addTail(val);
     }
 
 }
