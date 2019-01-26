@@ -89,7 +89,9 @@ void LinkedList::menuOption() {
 }
 
 /*********************************************************************
-** Description:     adds a new node to the head of the list
+** Description:     adds a new node to the head of the list and
+**                  updates tail pointer to the last node on the list,
+**                  if it exist
 *********************************************************************/
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
@@ -108,8 +110,6 @@ void LinkedList::addHead(int val) {
             nodePtr = nodePtr->getNext();
         }
         tail = nodePtr;
-        // DEBUGGING - used to make sure tail is equal to last value
-        // cout << "Tail value " << tail->getVal() << endl;
     }
 
     // traverse the list
@@ -118,17 +118,17 @@ void LinkedList::addHead(int val) {
 }
 
 /*********************************************************************
-** Description:     adds a new node to the tail of the list
+** Description:     adds a new node to the tail of the list and
+**                  updates tail pointer to last node on list, if it
+**                  exist
 *********************************************************************/
 void LinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
         head->setNext(nullptr);
-        cout << "value added to null tail " << head->getVal() << endl << endl;
 
         // set tail equal to head node
         tail = head;
-        cout << "Tail value " << tail->getVal() << endl;
     }
     else {
         // create pointer and assign to head of list
@@ -147,9 +147,6 @@ void LinkedList::addTail(int val) {
             nodePtr = nodePtr->getNext();
         }
         tail = nodePtr;
-
-        // DEBUGGING - used to make sure tail is equal to last value
-        // cout << "Tail value " << tail->getVal() << endl << endl;
     }
 
     // traverse the list
