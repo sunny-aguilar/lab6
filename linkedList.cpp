@@ -1,11 +1,14 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 2019
-** Description:     LAB6 -
-**                  d
-**                  d
-**                  d
-**                  d
+** Description:     The linkedList class (doubly-linked list)  holds
+**                  the functions that are performed on the nodes.
+**                  Nodes can be added to the head, deleted from the
+**                  tail, and you can traverse backwards through the
+**                  the nodes. Node values are printed after each
+**                  operation if there are nodes in the list.
+**                  EXTRA CREDIT - print head value
+**                  EXTRA CREDIT - print tail value
 *********************************************************************/
 
 #include "linkedList.hpp"
