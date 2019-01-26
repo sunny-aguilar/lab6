@@ -296,7 +296,8 @@ void LinkedList::printTail() {
 }
 
 /*********************************************************************
-** Description:     EXTRA CREDIT - creates a list from a text file
+** Description:     EXTRA CREDIT - creates a list from a text file.
+**                  File name is node_list.txt
 *********************************************************************/
 void LinkedList::createListFromFile() {
     // create variables
@@ -307,8 +308,8 @@ void LinkedList::createListFromFile() {
 
     // loop - ask user for file name if incorrect
     do {
-        cin >> fileName;                        // file_fun.txt
-        inFile.open(fileName);                  // input file data from file_fun.txt
+        cin >> fileName;                        // node_list.txt
+        inFile.open(fileName);                  // input file data from node_list.txt
         if (inFile.fail())
             cout << "File not found! "          // request file name if not found
                  << "Enter a file name:\n";
