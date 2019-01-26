@@ -25,7 +25,10 @@
 LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 
 /*********************************************************************
-** Description:     destructor that destroys the list
+** Description:     destructor that destroys the list by iterating
+**                  through each node and destroying it while at the
+**                  same time saving the address of the next node in
+**                  order to reach the next node
 *********************************************************************/
 LinkedList::~LinkedList() {
     Node *nodePtr = head;
