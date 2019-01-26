@@ -26,6 +26,7 @@
 class LinkedList {
 public:
     LinkedList();
+    ~LinkedList();
     void startSim();
     void programLogic();
     void menuOption();

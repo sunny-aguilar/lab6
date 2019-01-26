@@ -19,6 +19,11 @@
 LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 
 /*********************************************************************
+** Description:     destructor that destroys the list
+*********************************************************************/
+
+
+/*********************************************************************
 ** Description:     start the linked list program
 *********************************************************************/
 void LinkedList::startSim() {
