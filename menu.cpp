@@ -21,10 +21,7 @@ void Menu::menuStart() {
     cout << "   3. Delete from head\n";
     cout << "   4. Delete from tail\n";
     cout << "   5. Traverse the list reversely\n";
-    cout << "   6. Print head value\n";
-    cout << "   7. Print tail value\n";
-    cout << "   8. Create node list from file\n";
-    cout << "   9. Exit\n";
+    cout << "   6. Exit\n";
     cout << "   >> ";
 }
 
