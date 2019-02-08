@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 14, 2019
 ** Description:     Node class is the data structure that consists of
 **                  of the node. The node only holds one integer
 **                  data value and two pointers that can hold nodes.

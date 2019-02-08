@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 14, 2019
 ** Description:     LAB6 - this program allows a user to create a
 **                  simple linked list. A menu first appears that shows
 **                  the user the possible interactions they can have,
