@@ -1,6 +1,6 @@
 # File: 	makefile
 # Author: 	Sandro Aguilar
-# Date: 	February 2019
+# Date: 	February 14, 2019
 # Description:	Makefile for Lab 6
 
 # Variables to control Makefile operation
@@ -33,9 +33,9 @@ Node: $(OBJECTS)
 main.o: main.cpp $(HPPs)
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-linkedList.o: linkedList.cpp
+linkedList.o: linkedList.hpp
 
-node.o: node.cpp
+node.o: node.hpp
 
 menu.o: menu.hpp
 
