@@ -13,9 +13,6 @@
 **                  after each operation. There is also a function
 **                  that displays the value in each node in reverse
 **                  and it uses recursion to accomplish that.
-**                  EXTRA CREDIT - print head value
-**                  EXTRA CREDIT - print tail value
-**                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 
 #ifndef LINKEDLIST_HPP
@@ -38,9 +35,6 @@ public:
     void deleteFirstNode();
     void deleteLastNode();
     void traverseBackwards(Node *phead);
-    void printHead();
-    void printTail();
-    void createListFromFile();
 
 private:
     Menu menu;
