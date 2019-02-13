@@ -1,3 +1,4 @@
+/*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 14, 2019
 ** Description:     LAB6 - this program allows a user to create a
