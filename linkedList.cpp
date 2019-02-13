@@ -54,7 +54,6 @@ void LinkedList::programLogic() {
 
     do {
         menu.menuStart();
-
         menuOption();
     } while (showMenu);
 
@@ -122,6 +121,7 @@ void LinkedList::menuOption() {
 *********************************************************************/
 void LinkedList::addHead(int val) {
     if (head == nullptr) {
+        // set node equal to head
         head = new Node(val);
 
         // set tail equal to head node
