@@ -13,6 +13,9 @@
 **                  after each operation. There is also a function
 **                  that displays the value in each node in reverse
 **                  and it uses recursion to accomplish that.
+**                  EXTRA CREDIT - print head value
+**                  EXTRA CREDIT - print tail value
+**                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 
 #include "linkedList.hpp"
@@ -89,6 +92,21 @@ void LinkedList::menuOption() {
             cout << endl;
             break;
         case 6:
+            // Display head node value
+            menu.printHeadValue();
+            printHead();
+            break;
+        case 7:
+            // Display tail node value
+            menu.printTailValue();
+            printTail();
+            break;
+        case 8:
+            // Create a linked list from a text file
+            menu.textFileList();
+            createListFromFile();
+            break;
+        case 9:
             // Exit
             showMenu = false;
             break;
@@ -250,4 +268,75 @@ void LinkedList::traverseForward() {
         nodePtr = nodePtr->getNext();
     }
     cout << endl << endl;
+}
+
+/*********************************************************************
+** Description:     EXTRA CREDIT - prints the value of the head node
+*********************************************************************/
+void LinkedList::printHead() {
+    Node *nodePtr = head;
+    if (!nodePtr) {
+        cout << "there is no node in the head\n";
+    }
+    if (nodePtr) {
+        cout << "Head value is " << nodePtr->getVal() << endl;
+    }
+}
+
+/*********************************************************************
+** Description:     EXTRA CREDIT - prints the value of the tail node
+*********************************************************************/
+void LinkedList::printTail() {
+    Node *nodePtr = head;
+    if (!nodePtr) {
+        cout << "there is no node in the tail\n";
+    }
+    else {
+        cout << "Tail value is " << tail->getVal() << endl;
+    }
+}
+
+/*********************************************************************
+** Description:     EXTRA CREDIT - creates a list from a text file.
+**                  File name is node_list.txt. If a node list already
+**                  exist, I programmed it so that you cannot create
+**                  another one (cannot add to it). Otherwise, if no
+**                  node list exist yet, then a user is allowed to
+**                  create one from a text file.
+*********************************************************************/
+void LinkedList::createListFromFile() {
+    // do not create a node list if one already exist
+    if (head != nullptr) {
+        cout << "A node list already exists!\n";
+        return;
+    }
+
+    // create a node list from a text file
+    string fileName;                            // holds input file name
+    ifstream inFile;                            // create input file object
+    string input;
+
+    // loop - ask user for file name if incorrect
+    do {
+        cin >> fileName;                        // node_list.txt
+        inFile.open(fileName);                  // input file data from node_list.txt
+        if (inFile.fail())
+            cout << "File not found! "          // request file name if not found
+                 << "Enter a file name:\n";
+    } while (inFile.fail());                    // if file not found, repeat loop
+
+    // confirm input file opened
+    cout << "Input file successfully opened\n";
+
+    // get each value until end of file is reached
+    while (!inFile.eof()) {
+        // get a paragraph
+        getline(inFile, input);
+
+        // convert string to int
+        int val = std::atoi(input.c_str());
+
+        // add each value to the end of the list
+        addTail(val);
+    }
 }
