@@ -296,6 +296,18 @@ void LinkedList::printTail() {
 }
 
 /*********************************************************************
+** Description:     clears the node list
+*********************************************************************/
+void LinkedList::clearList() {
+    Node *nodePtr = head;
+    while (nodePtr != nullptr) {
+        Node *garbage = nodePtr;
+        nodePtr = nodePtr->getNext();
+        delete garbage;
+    }
+}
+
+/*********************************************************************
 ** Description:     EXTRA CREDIT - creates a list from a text file.
 **                  File name is node_list.txt. If a node list already
 **                  exist, I programmed it so that you cannot create
@@ -304,11 +316,26 @@ void LinkedList::printTail() {
 **                  create one from a text file.
 *********************************************************************/
 void LinkedList::createListFromFile() {
-    // do not create a node list if one already exist
+    char userInput = 'z';
+
+    // warn user that prior node list will be over-written
     if (head != nullptr) {
         cout << "A node list already exists!\n";
-        return;
+        cout << "This operation will replace your list with values from ";
+        cout << "node_list.txt\n";
+
+        do {
+            cout << "Enter 'y' to continue or 'n' to return to the menu." << endl;
+            cin >> userInput;
+        } while (userInput != 'y' && userInput != 'n');
+        if (userInput == 'n') { return; }
     }
+
+    // inform user a node list is being created
+    cout << "A node list is being created from a file.\n";
+
+    // clear prior node list
+    clearList();
 
     // create a node list from a text file
     string fileName;                            // holds input file name

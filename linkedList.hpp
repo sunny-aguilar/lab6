@@ -40,6 +40,7 @@ public:
     void traverseBackwards(Node *phead);
     void printHead();
     void printTail();
+    void clearList();
     void createListFromFile();
 
 private:
