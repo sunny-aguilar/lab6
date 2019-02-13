@@ -1,6 +1,6 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar
-** Date:            Feb 2019
+** Date:            Feb 14, 2019
 ** Description:     LinkedList class is where the functions are held
 **                  that interact with the nodes in the linked-list.
 **                  LinkedList owns a menu object to handles the menu
