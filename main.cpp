@@ -1,4 +1,3 @@
-/*********************************************************************
 ** Author:          Sandro Aguilar
 ** Date:            Feb 14, 2019
 ** Description:     LAB6 - this program allows a user to create a
@@ -12,6 +11,9 @@
 **                  exist. Recursion is used to print the list in
 **                  reverse. After a user is done interacting with the
 **                  linked-list, they can quit the program.
+**                  EXTRA CREDIT - print head value
+**                  EXTRA CREDIT - print tail value
+**                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 #include "linkedList.hpp"
 #include <iostream>
