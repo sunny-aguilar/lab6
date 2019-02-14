@@ -194,8 +194,13 @@ void DoublyLinkedList::deleteFirstNode() {
     }
     else {
         menu.menuDeleteNodeHead();
+        // get head node
         nodePtr = head;
+        // set new head to next node
         head = head->getNext();
+        // set new head prev pointer to nullptr
+        head->setPrev(nullptr);
+
         delete nodePtr;
     }
 
