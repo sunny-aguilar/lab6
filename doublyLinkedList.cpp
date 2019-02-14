@@ -312,8 +312,8 @@ void DoublyLinkedList::clearList() {
         Node *garbage = nodePtr;
         nodePtr = nodePtr->getNext();
         delete garbage;
-        nodePtr = nullptr;
     }
+    head = nullptr;
 }
 
 /*********************************************************************
@@ -325,19 +325,21 @@ void DoublyLinkedList::clearList() {
 **                  create one from a text file.
 *********************************************************************/
 void DoublyLinkedList::createListFromFile() {
-    char userInput = 'z';
+    int overwrite = 0;
 
     // warn user that prior node list will be over-written
     if (head != nullptr) {
         cout << "A node list already exists!\n";
-        cout << "This operation will replace your \n";
+        cout << "This operation will overwrite your \n";
         cout << "list with values from node_list.txt \n";
 
         do {
-            cout << "Enter 'y' to continue or 'n' to return to the menu." << endl;
-            cin >> userInput;
-        } while (userInput != 'y' && userInput != 'n');
-        if (userInput == 'n') { return; }
+            cout << "1. Overwrite list\n";
+            cout << "2. Back to main menu\n";
+            cout << ">> ";
+            overwrite = menu.validateNumber(1,2);
+        } while (overwrite != 1 && overwrite != 2);
+        if (overwrite == 2) { return; }
     }
 
     // inform user a node list is being created
@@ -374,7 +376,6 @@ void DoublyLinkedList::createListFromFile() {
 
         // convert string to int
         int val = std::atoi(input.c_str());
-
         // add each value to the end of the list
         addTail(val);
     }

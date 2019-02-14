@@ -12,16 +12,16 @@ CXXFLAGS += -g
 CXXFLAGS += -std=c++0x
 
 OBJECTS = main.o
-OBJECTS += linkedList.o
+OBJECTS += doublyLinkedList.o
 OBJECTS += node.o
 OBJECTS += menu.o
 
-HPPs = linkedList.hpp
+HPPs = doublyLinkedList.hpp
 HPPs += node.hpp
 HPPs += menu.hpp
 
 CPPs = main.cpp
-CPPs += linkedList.cpp
+CPPs += doublyLinkedList.cpp
 CPPs += node.cpp
 CPPs += menu.cpp
 
@@ -33,7 +33,7 @@ Node: $(OBJECTS)
 main.o: main.cpp $(HPPs)
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-linkedList.o: linkedList.hpp
+doublyLinkedList.o: doublyLinkedList.hpp
 
 node.o: node.hpp
 
