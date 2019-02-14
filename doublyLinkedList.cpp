@@ -154,7 +154,7 @@ void DoublyLinkedList::addHead(int val) {
 void DoublyLinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
-        head->setNext(nullptr);
+        //head->setNext(nullptr);  DELETE THIS, REDUNDANT
 
         // set tail equal to head node
         tail = head;
