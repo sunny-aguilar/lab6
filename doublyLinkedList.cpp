@@ -167,8 +167,8 @@ void DoublyLinkedList::addTail(int val) {
         while (nodePtr->getNext() != nullptr) {
             nodePtr = nodePtr->getNext();
         }
-        // create a node and assign to next
-        nodePtr->setNext(new Node(val));
+        // create a node, assign to next, and assign prev to old last node
+        nodePtr->setNext(new Node(val, nullptr, nodePtr));
 
         // set tail to last node on list
         nodePtr = head->getNext();
