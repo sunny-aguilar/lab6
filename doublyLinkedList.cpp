@@ -200,7 +200,7 @@ void DoublyLinkedList::deleteFirstNode() {
         head = head->getNext();
         // set new head prev pointer to nullptr
         head->setPrev(nullptr);
-
+        // delete first node
         delete nodePtr;
     }
 
