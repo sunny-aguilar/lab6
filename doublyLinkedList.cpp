@@ -330,8 +330,8 @@ void DoublyLinkedList::createListFromFile() {
     // warn user that prior node list will be over-written
     if (head != nullptr) {
         cout << "A node list already exists!\n";
-        cout << "This operation will replace your list with values ";
-        cout << "from node_list.txt\n";
+        cout << "This operation will replace your \n";
+        cout << "list with values from node_list.txt \n";
 
         do {
             cout << "Enter 'y' to continue or 'n' to return to the menu." << endl;
@@ -353,6 +353,7 @@ void DoublyLinkedList::createListFromFile() {
 
     // prompt user to enter file name
     cout << "Enter the text file name (i.e., node_list.txt)\n";
+    cout << ">> ";
 
     // loop - ask user for file name if incorrect
     do {
