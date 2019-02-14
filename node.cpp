@@ -23,7 +23,7 @@ Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 ** Description:     two-arg default constructor sets initial value, &
 **                  initializes next and prior node pointers
 *********************************************************************/
-Node::Node(int val, Node *node) : val{val}, next{node}, prev{node} {}
+Node::Node(int val, Node *next, Node *prev) : val{val}, next{next}, prev{prev} {}
 
 /*********************************************************************
 ** Description:     sets next pointer

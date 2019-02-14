@@ -23,7 +23,10 @@
 /*********************************************************************
 ** Description:     no-args default constructor
 *********************************************************************/
-DoublyLinkedList::DoublyLinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
+DoublyLinkedList::DoublyLinkedList() :
+    showMenu{true},
+    head{nullptr},
+    tail{nullptr} {}
 
 /*********************************************************************
 ** Description:     destructor that destroys the list by iterating
