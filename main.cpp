@@ -16,11 +16,11 @@
 **                  EXTRA CREDIT - print tail value
 **                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
-#include "linkedList.hpp"
+#include "doublyLinkedList.hpp"
 #include <iostream>
 
 int main() {
-    LinkedList link;
+    DoublyLinkedList link;
     link.startSim();
     return 0;
 }

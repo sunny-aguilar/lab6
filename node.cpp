@@ -20,9 +20,10 @@
 Node::Node() : val{0}, next{nullptr}, prev{nullptr} {}
 
 /*********************************************************************
-** Description:     one-args default constructor sets initial value
+** Description:     two-arg default constructor sets initial value, &
+**                  initializes next and prior node pointers
 *********************************************************************/
-Node::Node(int val, Node *node) : val{val}, next{node} {}
+Node::Node(int val, Node *node) : val{val}, next{node}, prev{node} {}
 
 /*********************************************************************
 ** Description:     sets next pointer
@@ -36,6 +37,20 @@ void Node::setNext(Node *next) {
 *********************************************************************/
 Node *Node::getNext() {
     return next;
+}
+
+/*********************************************************************
+** Description:     sets prev pointer
+*********************************************************************/
+void Node::setPrev(Node *prev) {
+    this->prev = prev;
+}
+
+/*********************************************************************
+** Description:     returns prev pointer
+*********************************************************************/
+Node *Node::getPrev() {
+    return prev;
 }
 
 /*********************************************************************

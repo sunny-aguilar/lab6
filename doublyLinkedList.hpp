@@ -26,10 +26,10 @@
 #include <fstream>
 using std::ifstream;
 
-class LinkedList {
+class DoublyLinkedList {
 public:
-    LinkedList();
-    ~LinkedList();
+    DoublyLinkedList();
+    ~DoublyLinkedList();
     void startSim();
     void programLogic();
     void menuOption();

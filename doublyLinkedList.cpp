@@ -18,12 +18,12 @@
 **                  EXTRA CREDIT - creates a list from a text file.
 *********************************************************************/
 
-#include "linkedList.hpp"
+#include "doublyLinkedList.hpp"
 
 /*********************************************************************
 ** Description:     no-args default constructor
 *********************************************************************/
-LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
+DoublyLinkedList::DoublyLinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 
 /*********************************************************************
 ** Description:     destructor that destroys the list by iterating
@@ -31,7 +31,7 @@ LinkedList::LinkedList() : showMenu{true}, head{nullptr}, tail{nullptr} {}
 **                  same time saving the address of the next node in
 **                  order to reach the next node
 *********************************************************************/
-LinkedList::~LinkedList() {
+DoublyLinkedList::~DoublyLinkedList() {
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
         Node *garbage = nodePtr;
@@ -43,14 +43,14 @@ LinkedList::~LinkedList() {
 /*********************************************************************
 ** Description:     start the linked list program
 *********************************************************************/
-void LinkedList::startSim() {
+void DoublyLinkedList::startSim() {
     programLogic();
 }
 
 /*********************************************************************
 ** Description:     controls the program logic flow
 *********************************************************************/
-void LinkedList::programLogic() {
+void DoublyLinkedList::programLogic() {
 
     do {
         menu.menuStart();
@@ -64,7 +64,7 @@ void LinkedList::programLogic() {
 ** Description:     this function gets the user's main menu selection
 **                  and completes the operation selected
 *********************************************************************/
-void LinkedList::menuOption() {
+void DoublyLinkedList::menuOption() {
     switch ( menu.validateNumber(1,9) ) {
         case 1:
             // Add an ew node to the head
@@ -119,7 +119,7 @@ void LinkedList::menuOption() {
 **                  updates tail pointer to the last node on the list,
 **                  if it exist
 *********************************************************************/
-void LinkedList::addHead(int val) {
+void DoublyLinkedList::addHead(int val) {
     if (head == nullptr) {
         // set node equal to head
         head = new Node(val);
@@ -148,7 +148,7 @@ void LinkedList::addHead(int val) {
 **                  updates tail pointer to last node on list, if it
 **                  exist
 *********************************************************************/
-void LinkedList::addTail(int val) {
+void DoublyLinkedList::addTail(int val) {
     if (head == nullptr) {
         head = new Node(val);
         head->setNext(nullptr);
@@ -183,7 +183,7 @@ void LinkedList::addTail(int val) {
 /*********************************************************************
 ** Description:     deletes the first node in the list
 *********************************************************************/
-void LinkedList::deleteFirstNode() {
+void DoublyLinkedList::deleteFirstNode() {
     Node *nodePtr;
     if (!head) {
         menu.menuListEmpty();
@@ -205,7 +205,7 @@ void LinkedList::deleteFirstNode() {
 ** Description:     deletes the last node in the list and updates
 **                  tail pointer to last node on list, if it exist
 *********************************************************************/
-void LinkedList::deleteLastNode() {
+void DoublyLinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
     nodePtr = prev = head;
 
@@ -243,7 +243,7 @@ void LinkedList::deleteLastNode() {
 **                  nullptr. Base case will print the value starting
 **                  with the last value in the linked list.
 *********************************************************************/
-void LinkedList::traverseBackwards(Node *pHead) {
+void DoublyLinkedList::traverseBackwards(Node *pHead) {
     Node *nodePtr = pHead;
 
     if (!nodePtr) {
@@ -260,7 +260,7 @@ void LinkedList::traverseBackwards(Node *pHead) {
 /*********************************************************************
 ** Description:     traverse the list forward
 *********************************************************************/
-void LinkedList::traverseForward() {
+void DoublyLinkedList::traverseForward() {
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
         cout << nodePtr->getVal()  << " ";
@@ -272,7 +272,7 @@ void LinkedList::traverseForward() {
 /*********************************************************************
 ** Description:     EXTRA CREDIT - prints the value of the head node
 *********************************************************************/
-void LinkedList::printHead() {
+void DoublyLinkedList::printHead() {
     Node *nodePtr = head;
     if (!nodePtr) {
         cout << "there is no node in the head\n";
@@ -285,7 +285,7 @@ void LinkedList::printHead() {
 /*********************************************************************
 ** Description:     EXTRA CREDIT - prints the value of the tail node
 *********************************************************************/
-void LinkedList::printTail() {
+void DoublyLinkedList::printTail() {
     Node *nodePtr = head;
     if (!nodePtr) {
         cout << "there is no node in the tail\n";
@@ -298,12 +298,13 @@ void LinkedList::printTail() {
 /*********************************************************************
 ** Description:     clears the node list
 *********************************************************************/
-void LinkedList::clearList() {
+void DoublyLinkedList::clearList() {
     Node *nodePtr = head;
     while (nodePtr != nullptr) {
         Node *garbage = nodePtr;
         nodePtr = nodePtr->getNext();
         delete garbage;
+        nodePtr = nullptr;
     }
 }
 
@@ -315,14 +316,14 @@ void LinkedList::clearList() {
 **                  node list exist yet, then a user is allowed to
 **                  create one from a text file.
 *********************************************************************/
-void LinkedList::createListFromFile() {
+void DoublyLinkedList::createListFromFile() {
     char userInput = 'z';
 
     // warn user that prior node list will be over-written
     if (head != nullptr) {
         cout << "A node list already exists!\n";
-        cout << "This operation will replace your list with values from ";
-        cout << "node_list.txt\n";
+        cout << "This operation will replace your list with values ";
+        cout << "from node_list.txt\n";
 
         do {
             cout << "Enter 'y' to continue or 'n' to return to the menu." << endl;
@@ -341,6 +342,9 @@ void LinkedList::createListFromFile() {
     string fileName;                            // holds input file name
     ifstream inFile;                            // create input file object
     string input;
+
+    // prompt user to enter file name
+    cout << "Enter the text file name (i.e., node_list.txt)\n";
 
     // loop - ask user for file name if incorrect
     do {

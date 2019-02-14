@@ -27,6 +27,8 @@ public:
     Node(int val, Node *node = nullptr);
     void setNext(Node *nxt);
     Node *getNext();
+    void setPrev(Node *prev);
+    Node *getPrev();
     void setVal(int val);
     int getVal();
 
