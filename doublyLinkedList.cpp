@@ -366,11 +366,11 @@ void DoublyLinkedList::createListFromFile() {
 
     // clear prior node list
     if (overwrite == 1) {
-        cout << "Note - prior node list has been overwritten!\n ";
+        cout << "Note - prior node list has been overwritten!\n\n";
         clearList();
     }
     else if (overwrite == 2) {
-        cout << "Note - prior node list will be appended\n";
+        cout << "Note - prior node list will be appended\n\n";
     }
 
 
