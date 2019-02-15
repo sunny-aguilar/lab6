@@ -188,7 +188,7 @@ void DoublyLinkedList::addTail(int val) {
 **                  checks if the node list is empty. If its not, then
 **                  it checks to see if there is only one node. If
 **                  there is more than one node, this check is also
-**                  made.
+**                  made. Checking to see how many nodes there exist
 *********************************************************************/
 void DoublyLinkedList::deleteFirstNode() {
     Node *nodePtr;
