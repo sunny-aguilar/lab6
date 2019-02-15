@@ -5,7 +5,7 @@
 **                  that interact with the nodes in the linked-list.
 **                  LinkedList owns a menu object to handles the menu
 **                  operations. A node pointer is also declared
-**                  within the class to hold the head and tail of the
+**                  within the 1class to hold the head and tail of the
 **                  nodes. There are a total of 6 required functions
 **                  that add nodes to the head or tail, delete the
 **                  first or last nodes, traverses the list backwards,
@@ -191,6 +191,12 @@ void DoublyLinkedList::deleteFirstNode() {
     if (!head) {
         menu.menuListEmpty();
         return;
+    }
+    else if (head->getNext() == nullptr) {
+        nodePtr = head;
+        head = nullptr;
+        tail = nullptr;
+        delete nodePtr;
     }
     else {
         menu.menuDeleteNodeHead();
