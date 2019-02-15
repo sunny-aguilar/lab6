@@ -226,7 +226,7 @@ void DoublyLinkedList::deleteFirstNode() {
 **                  tail pointer to last node on list, if it exist.
 **                  First the list is checked to see if there are any
 **                  any nodes in it. If there is, then it checks to
-**
+**                  see if its just one node.
 *********************************************************************/
 void DoublyLinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
