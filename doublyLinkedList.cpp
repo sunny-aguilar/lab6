@@ -335,8 +335,8 @@ void DoublyLinkedList::clearList() {
 /*********************************************************************
 ** Description:     EXTRA CREDIT - creates a list from a text file.
 **                  File name is node_list.txt. If a node list already
-**                  exist, I programmed it so that you cannot create
-**                  another one (cannot add to it). Otherwise, if no
+**                  exist, I programmed it so that any list previously
+**                  in existence gets overridden. Otherwise, if no
 **                  node list exist yet, then a user is allowed to
 **                  create one from a text file.
 *********************************************************************/
@@ -346,23 +346,33 @@ void DoublyLinkedList::createListFromFile() {
     // warn user that prior node list will be over-written
     if (head != nullptr) {
         cout << "A node list already exists!\n";
-        cout << "This operation will overwrite your \n";
-        cout << "list with values from node_list.txt \n";
+        cout << "Would you like to overwrite the previous node list\n";
+        cout << "or would you like to append it?\n";
+        //cout << "This operation will overwrite your \n";
+        //cout << "list with values from node_list.txt \n";
 
         do {
             cout << "1. Overwrite list\n";
-            cout << "2. Back to main menu\n";
+            cout << "2. Append list\n";
+            cout << "3. Back to main menu\n";
             cout << ">> ";
-            overwrite = menu.validateNumber(1,2);
-        } while (overwrite != 1 && overwrite != 2);
-        if (overwrite == 2) { return; }
+            overwrite = menu.validateNumber(1,3);
+        } while (overwrite != 1 && overwrite != 2 && overwrite != 3);
+        if (overwrite == 3) { return; }
     }
 
     // inform user a node list is being created
-    cout << "A node list is being created from a file.\n";
+    cout << "Now creating a node list from a file.\n";
 
     // clear prior node list
-    clearList();
+    if (overwrite == 1) {
+        cout << "Note - prior node list has been overwritten!\n ";
+        clearList();
+    }
+    else if (overwrite == 2) {
+        cout << "Note - prior node list will be appended\n";
+    }
+
 
     // create a node list from a text file
     string fileName;                            // holds input file name
@@ -376,7 +386,7 @@ void DoublyLinkedList::createListFromFile() {
     // loop - ask user for file name if incorrect
     do {
         cin >> fileName;                        // node_list.txt
-        inFile.open(fileName);                  // input file data from node_list.txt
+        inFile.open(fileName);                  // open input file node_list.txt
         if (inFile.fail())
             cout << "File not found! "          // request file name if not found
                  << "Enter a file name:\n";
