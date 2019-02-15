@@ -14,7 +14,8 @@
 **                  linked-list, they can quit the program.
 **                  EXTRA CREDIT - print head value
 **                  EXTRA CREDIT - print tail value
-**                  EXTRA CREDIT - creates a list from a text file.
+**                  EXTRA CREDIT - creates a list from a text file
+**                  named node_list.txt
 *********************************************************************/
 #include "doublyLinkedList.hpp"
 #include <iostream>
