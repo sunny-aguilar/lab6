@@ -227,7 +227,7 @@ void DoublyLinkedList::deleteFirstNode() {
 **                  First the list is checked to see if there are any
 **                  any nodes in it. If there is, then it checks to
 **                  see if its just one node. If there is more than
- * 
+**                  one node, this checks is also made.
 *********************************************************************/
 void DoublyLinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
