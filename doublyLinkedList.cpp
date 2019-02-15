@@ -224,7 +224,7 @@ void DoublyLinkedList::deleteFirstNode() {
 /*********************************************************************
 ** Description:     deletes the last node in the list and updates
 **                  tail pointer to last node on list, if it exist.
-**
+**                  First the list 
 *********************************************************************/
 void DoublyLinkedList::deleteLastNode() {
     Node *nodePtr, *prev;
