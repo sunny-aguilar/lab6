@@ -186,7 +186,7 @@ void DoublyLinkedList::addTail(int val) {
 /*********************************************************************
 ** Description:     deletes the first node in the list. First it
 **                  checks if the node list is empty. If its not, then
-**                  it 
+**                  it checks to see
 *********************************************************************/
 void DoublyLinkedList::deleteFirstNode() {
     Node *nodePtr;
