@@ -189,7 +189,7 @@ void DoublyLinkedList::addTail(int val) {
 **                  it checks to see if there is only one node. If
 **                  there is more than one node, this check is also
 **                  made. Checking to see how many nodes there exist
- *                  is made in order to 
+ *                  is made in order to property delete the first
 *********************************************************************/
 void DoublyLinkedList::deleteFirstNode() {
     Node *nodePtr;
